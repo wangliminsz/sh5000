@@ -1,0 +1,17 @@
+<form>
+    <sheet string="sh5000 show - step by step">
+        <widget name="web_ribbon" text="Master Degree" bg_color="bg-danger" attrs="{'invisible': ['super_id','=','1']}"/>
+        <group col="4">
+            <field name="name" modifiers="{&quot;required&quot;: true}"/>
+            <field name="mobile" modifiers="{}"/>
+            <field name="dzz" modifiers="{}"/>
+            <field name="biryear" modifiers="{}"/>
+            <field name="education" modifiers="{}"/>
+            <field name="super_id" can_create="true" can_write="true" modifiers="{&quot;required&quot;: true}"/>
+            <newline/>
+            <field name="tag_ids" widget="many2many_tags" colspan="4" can_create="true" can_write="true" modifiers="{}"/>
+            <newline/>
+            <separator/>
+        </group>
+    </sheet>
+</form>

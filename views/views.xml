@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<odoo>
+
+ <record id="view_form_demo_sh5000_show" model="ir.ui.view">
+
+    <field name="name">Demo SH5000 Form</field>
+    <field name="model">demo.sh5000.show</field>
+    <field name="arch" type="xml">
+
+      <form string="Shanghai 5000">
+
+        <field name="name"/>
+        <field name="mobile"/>
+        <field name="dzz"/>
+        <field name="biryear"/>
+        <field name="education"/>
+        <field name="super_id"/>
+
+      </form>
+    </field>
+
+  </record>
+
+  <record id="view_tree_demo_sh5000_show" model="ir.ui.view">
+    <field name="name">Demo the Name List</field>
+    <field name="model">demo.sh5000.show</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="mobile"/>
+        <field name="dzz"/>
+        <field name="biryear"/>
+        <field name="education"/>
+        <field name="super_id"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_filter_demo_sh5000_show" model="ir.ui.view">
+    <field name="name">Demo SH5000 Filter</field>
+    <field name="model">demo.sh5000.show</field>
+    <field name="arch" type="xml">
+      <search string="Demo SHCP 5000 Filter">
+        <field name="dzz" string="Company"/>
+        <field name="education" string="Edu Status"/>
+        <group expand="0" string="Group By">
+          <filter string="Company" name="dzz" domain="[]" context="{'group_by': 'dzz'}"/>
+          <filter string="Edu Status" name="education" domain="[]" context="{'group_by': 'education'}"/>
+        </group>
+      </search>
+    </field>
+  </record>
+
+
+  <!-- <record id="view_form_demo_sh5000_showbysuper" model="ir.ui.view">
+    <field name="name">Supervisor Form</field>
+    <field name="model">res.users</field>
+    <field name="arch" type="xml">
+      <form string="Show them by Supervisor">
+
+  <sheet>
+    <notebook>
+      <page string="Hello SH5000(Page String)">
+        <field name="sh5000_line_ids">
+          <tree>
+            <field name="name"/>
+            <field name="mobile"/>
+            <field name="dzz"/>
+            <field name="tag_ids" widget="many2many_tags"/>
+          </tree>
+        </field>
+      </page>
+    </notebook>
+  </sheet>
+
+
+</form>
+</field>
+</record> -->
+
+
+</odoo>
