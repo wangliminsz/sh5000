@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <template id="demo_sh5000_template" name="Demo Sh5000-List">
+    <div id="wrap" class="container">
+      <h1>Demo Sh5000 List</h1>
+      <t t-foreach="objs" t-as="obj">
+        <div class="row">
+          <span t-field="obj.name" />
+          <span t-field="obj.dzz" />
+          <span t-field="obj.mobile" />
+          <span t-field="obj.biryear" />
+        </div>
+      </t>
+    </div>
+  </template>
+
+</odoo>

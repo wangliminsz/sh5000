@@ -19,15 +19,17 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','mail'],
+    'depends': ['base', 'mail'],
 
     # always loaded
     'data': [
-        'security/ir.model.access.csv',
         'security/security.xml',
+        'security/ir.model.access.csv',
         'views/menu.xml',
         'views/views.xml',
+        'reports/report.xml',
         'views/templates.xml',
+        'views/demo_sh5000_template.xml'
     ],
 
     # 'data': [

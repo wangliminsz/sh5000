@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_sh5000_sh5000,sh5000.sh5000,model_demo_sh5000_show,base.group_user,1,1,1,1
-access_sh5001_sh5001,sh5001.sh5001,model_demo_supervisor,base.group_user,1,1,1,1
+access_sh5000_sh5000,sh5000.sh5000,model_demo_sh5000_show,demo_sh5000_show_group_user,1,0,0,0
+access_sh5001_sh5001,sh5001.sh5001,model_demo_supervisor,demo_sh5000_show_group_user,1,0,0,0
+access_sh5002_sh5002,sh5002.sh5002,model_demo_sh5000_show,demo_sh5000_show_group_manager,1,1,1,1
+access_sh5003_sh5003,sh5003.sh5003,model_demo_supervisor,demo_sh5000_show_group_manager,1,1,1,1

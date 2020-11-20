@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_demo_sh5000_show">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Odoo Report(SH 5000)</h2>
+                        <div>
+                            <strong>Name:</strong>
+                            <p t-field="o.name"/>
+                        </div>
+                        <div>
+                            <strong>Company:</strong>
+                            <p t-field="o.dzz"/>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <report 
+    id="action_report_demo" 
+    string="Demo Report 5000" 
+    model="demo.sh5000.show" 
+    report_type="qweb-pdf" 
+    name="sh5000.report_demo_sh5000_show" 
+    file="sh5000.report_demo_sh5000_show" 
+    print_report_name="'Demo Report - %s' % ((object.name).replace('/', ''))" />
+
+
+    <template id="report_demo_sh5000_02">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Odoo Report(SH 5000 01)</h2>
+                        <div>
+                            <strong>Name:</strong>
+                            <p t-field="o.name"/>
+                        </div>
+                        <div>
+                            <strong>Company:</strong>
+                            <p t-field="o.mobile"/>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <report 
+    id="action_report_Shanghai" 
+    string="Demo Report Shanghai" 
+    model="demo.sh5000.show" 
+    report_type="qweb-pdf" 
+    name="sh5000.report_demo_sh5000_02" 
+    file="sh5000.report_demo_sh5000_00" 
+    print_report_name="'Demo Report - %s' % ((object.name).replace('/', ''))" />
+
+
+</odoo>

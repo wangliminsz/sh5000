@@ -1,30 +1,23 @@
 <?xml version="1.0"?>
 <odoo>
-    <!-- demo_sh5000_show App Menu -->
-    <menuitem id="demo_sh5000_show_menu"
-              name="Demo Sh5000 Show Root" />
+  <!-- demo_sh5000_show App Menu -->
+  <menuitem id="demo_sh5000_show_menu" name="Demo Sh5000 Show Root" />
 
-    <!-- Action to open the demo_odoo_tutorial -->
-    <act_window id="action_sh5000_show"
-      name="Demo SH5000 Show Show Show"
-      res_model="demo.sh5000.show"
-      view_mode="tree,form"/>
+  <!-- Action to open the demo_odoo_tutorial -->
+  <act_window id="action_system_users_show" name="Supervisor" res_model="demo.supervisor" view_mode="tree,form"/>
 
-    <!-- Action to open the demo_odoo_tutorial -->
-    <act_window id="action_system_users_show"
-      name="Supervisor"
-      res_model="demo.supervisor"
-      view_mode="tree,form"/> 
+  <!-- Action to open the demo_odoo_tutorial -->
+  <act_window id="action_sh5000_show" name="Demo SH5000 Show Show Show" res_model="demo.sh5000.show" view_mode="tree,form"/>
 
-    <!-- Menu item to open the demo_odoo_tutorial -->
-    <menuitem id="menu_sh5000_show"
-              name="Demo Sh5000 Show 02"
-	            action="action_sh5000_show"
-              parent="demo_sh5000_show_menu" />
+ <menuitem id="menu_sh5000_show" name="SH 5000 List" action="action_sh5000_show" parent="demo_sh5000_show_menu" />
 
-    <!-- Menu item to open the demo_odoo_tutorial -->
-    <menuitem id="menu_sh5000_show_03"
-              name="Demo Sh5000 Show 03"
-	            action="action_system_users_show"
-              parent="demo_sh5000_show_menu" />
+  <menuitem id="menu_super_show" name="Supervisor" action="action_system_users_show" parent="demo_sh5000_show_menu" /> -->
+ 
+
+  <!-- Menu item to open the demo_odoo_tutorial
+  <menuitem id="menu_sh5000_show_03" name="Demo Sh5000 Show 03" action="action_system_users_show" parent="demo_sh5000_show_menu" />
+
+  <Menu item to open the demo_odoo_tutorial>
+  <menuitem id="menu_sh5000_show" name="Demo Sh5000 Show 02" action="action_sh5000_show" parent="demo_sh5000_show_menu" /> -->
+
 </odoo>

@@ -1,3 +1,16 @@
+from odoo import http
+
+
+class Show5000(http.Controller):
+
+    @http.route('/demo/sh5000', auth='public')
+    def list(self, **kwargs):
+        obj = http.request.env['demo.sh5000.show']
+        objs = obj.search([])
+        return http.request.render(
+            'sh5000.demo_sh5000_template',{'objs': objs})
+
+
 # -*- coding: utf-8 -*-
 # from odoo import http
 
