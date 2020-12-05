@@ -25,10 +25,15 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
-        'views/menu.xml',
+        'security/ir_rule.xml',
+        'data/sh5000_data.xml',
+        'data/action_data.xml',
+        'data/mail_data.xml',
         'views/views.xml',
+        'views/menu.xml',
         'reports/report.xml',
         'views/templates.xml',
+        'views/example_webpage.xml',
         'views/demo_sh5000_template.xml'
     ],
 

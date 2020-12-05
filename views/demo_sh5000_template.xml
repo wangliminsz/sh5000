@@ -2,6 +2,57 @@
 <odoo>
 
   <template id="demo_sh5000_template" name="Demo Sh5000-List">
+
+    <style>.td1{width:25px; overflow:hidden}</style>
+    <style>.td2{width:120px; overflow:hidden}</style>
+    <style> tr td,th{border:1px solid grey;}</style>
+ 
+    <script>function displayDate(){document.getElementById("demo").innerHTML=Date();}</script>
+
+    <div id="wrap" class="container">
+      <h1>Demo Sh5000 List</h1>
+
+      <p id="demo">这是一个段落</p>
+
+      <button type="button" onclick="displayDate()">显示日期</button><br/><br/>
+
+      <t t-foreach="objs" t-as="obj">
+
+        <table class="table-striped table" width="70%" border="0" cellspacing="1" cellpadding="4" bgcolor="darkblue" align="left" style="margin-bottom:10px">
+          <tr>
+            <td class="td1" bgcolor="white">Name:</td>
+            <td class="td2" bgcolor="white">
+              <span t-field="obj.name"/>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="td1" bgcolor="white">Company:</td>
+            <td class="td2" bgcolor="white">
+              <span t-field="obj.dzz"/>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="td1" bgcolor="white">Mobile:</td>
+            <td class="td2" bgcolor="white">
+              <span t-field="obj.mobile"/>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="td1" bgcolor="white">Birth Year:</td>
+            <td class="td2" bgcolor="white">
+              <span t-field="obj.biryear"/>
+            </td>
+          </tr>
+        </table><br/>
+
+      </t>
+    </div>
+  </template>
+
+  <!--template id="demo_sh5000_template" name="Demo Sh5000-List">
     <div id="wrap" class="container">
       <h1>Demo Sh5000 List</h1>
       <t t-foreach="objs" t-as="obj">
@@ -13,6 +64,6 @@
         </div>
       </t>
     </div>
-  </template>
+  </template-->
 
 </odoo>
